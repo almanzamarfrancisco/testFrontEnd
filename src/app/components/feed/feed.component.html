@@ -31,19 +31,16 @@
 						</div>
 					</div>
 				</div>
-				<div class="row text-dark">
-					<div class="card m-3 col-3">
-						<img src="./assets/good_news.png" class="card-img-top" alt="notice">
-						<div class="card-body">
-							<h5 class="card-title">News Title</h5>
-							<h6 class="card-subtitle mb-2 text-muted">News - Source</h6>
-							<p class="card-text">Content.</p>
-							<p class="card-text">
-								<small class="text-muted">
-									Date: 00/00/00 <button class="btn btn-sm btn-outline-dark">See more</button>
-								</small>
-							</p>
-						</div>
+				<div class="row text-dark p-5">
+					<div *ngFor="let notice of notices" class="col-3">
+						<app-notice 
+							[title]="notice.title"
+							[source]="notice.source"
+							[content]="notice.content"
+							[date]="notice.date"
+							[link]="notice.link"
+						>
+						</app-notice>
 					</div>
 				</div>
 			</div>

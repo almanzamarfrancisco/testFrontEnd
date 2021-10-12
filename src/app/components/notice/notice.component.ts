@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-notice',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notice.component.css']
 })
 export class NoticeComponent implements OnInit {
+
+   @Input() title = ''; 
+   @Input() source = ''; 
+   @Input() content = ''; 
+   @Input() date = ''; 
+   @Input() link = ''; 
 
   constructor() { }
 
